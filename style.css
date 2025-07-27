@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg,hsl(153, 56.30%, 40.40%),rgba(250, 242, 241, 0.99));
+  font-family: 'rowdies', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form input, form select, form button {
+  flex: 1 1 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#entry-list {
+  list-style: none;
+  padding: 0;
+}
+
+.entry-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: #f1f1f1;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid;
+}
+
+.entry-item.income {
+  border-color: green;
+}
+
+.entry-item.expense {
+  border-color: red;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(135deg,hsl(33, 96.40%, 44.10%),rgb(241, 250, 247));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg,rgb(206, 105, 33),rgb(206, 105, 33));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 500px) {
+  .summary {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .entry-item {
+    flex-direction: column;
+  }
+
+  .entry-actions {
+    margin-top: 5px;
+  }
+}
